@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_search_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/layout_clear_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/opacityBackground"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/layout_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/lightBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/action_back_btn"
+        app:srcCompat="@drawable/ic_round_arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar"
+        style="@style/SeachView_Actions" />
+
+    <ImageView
+        android:id="@+id/search_type_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:foregroundGravity="center"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/action_back_btn"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar"/>
+
+    <TextView
+        android:id="@+id/search_type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/textHighEmphasis"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/search_type_image"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar"/>
+
+    <EditText
+        android:id="@+id/search_input_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:hint="@string/search_hint"
+        android:imeOptions="actionSearch"
+        android:inputType="textNoSuggestions"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:textColor="@color/textHighEmphasis"
+        android:textColorHint="@color/textMediumEmphasis"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/search_type_text"
+        app:layout_constraintEnd_toStartOf="@id/action_clear_btn"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar" />
+
+    <ImageButton
+        android:id="@+id/action_voice_btn"
+        app:srcCompat="@drawable/ic_round_keyboard_voice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar"
+        style="@style/SeachView_Actions" />
+
+    <ImageButton
+        android:id="@+id/action_clear_btn"
+        app:srcCompat="@drawable/ic_round_close"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar"
+        style="@style/SeachView_Actions" />
+
+    <View
+        android:id="@+id/layout_search_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dip"
+        android:background="@color/dividerColor"
+        app:layout_constraintBottom_toBottomOf="@id/layout_search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ListView
+        android:id="@+id/list_search_types"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/layout_search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ListView
+        android:id="@+id/list_search_suggest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/list_search_types"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomSearchView">
+        <attr name="searchBackground" format="integer" />
+        <attr name="searchVoiceIcon" format="integer" />
+        <attr name="searchClearIcon" format="integer" />
+        <attr name="searchBackIcon" format="integer" />
+        <attr name="searchSuggestionIcon" format="integer" />
+        <attr name="listViewBackgroundDrawable" format="integer" />
+        <attr name="listViewBackgroundColor" format="color" />
+        <attr name="listViewTextColor" format="color" />
+        <attr name="enableVoiceSearch" format="boolean"/>
+        <attr name="showOnlyIconType" format="boolean"/>
+        <attr name="android:hint" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+</resources>
